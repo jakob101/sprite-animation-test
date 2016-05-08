@@ -1,0 +1,12 @@
+.credits {
+    font-family: 'Open Sans', sans-serif;
+    position: absolute;
+    right: 30px;
+    top: 10px;
+    color: #ECECEC;
+    font-size: 13px;
+}
+
+.credits a {
+    color: #ECECEC;
+}

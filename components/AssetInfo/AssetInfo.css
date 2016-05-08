@@ -1,0 +1,39 @@
+#info {
+    position: absolute;
+    bottom: 50px;
+    left: 40px;
+    background: white;
+    border-radius: 30px;
+    height: 60px;
+    transition: transform 0.5s cubic-bezier(0.060, 0.735, 0.000, 0.995);
+    animation: moveInFromLeft 0.5s cubic-bezier(0.060, 0.735, 0.000, 0.995);
+}
+
+@keyframes moveInFromLeft {
+    from {
+        transform: translateX(-100px);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+.iconInfo {
+    color: white;
+    width: 55px;
+    height: 55px;
+    margin-left: 3px;
+    margin-top: 2px;
+    background: #09727D;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 55px;
+    display: inline-block;
+}
+
+.infoContent {
+    font-family: 'Roboto Slab', serif;
+    display: inline-block;
+    padding-right: 15px;
+    margin-left: 8px;
+}

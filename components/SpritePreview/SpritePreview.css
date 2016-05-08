@@ -1,0 +1,31 @@
+#canvasContainer {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    padding: 60px;
+    box-sizing: border-box;
+    border-radius: 30px;
+    background: white;
+    animation: fadeIn 0.5s cubic-bezier(0.060, 0.735, 0.000, 0.995);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+#canvasContainer span {
+    padding: 0;
+    margin: 0;
+    color: white;
+}
+
+#imageCanvas {
+    display: none;
+}

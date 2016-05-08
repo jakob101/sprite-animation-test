@@ -1,0 +1,27 @@
+.tip {
+    font-family: 'Open Sans', sans-serif;
+    position: absolute;
+    font-size: 14px;
+    left: 50%;
+    top: 60px;
+    color: #ECECEC;
+    transform: translateX(-50%);
+    animation: fadeIn 0.5s cubic-bezier(0.060, 0.735, 0.000, 0.995);
+}
+
+.tipIcon {
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 20px;
+    animation-delay: 1000ms;
+    animation: springDown 0.5s cubic-bezier(.07,.88,.45,1.08);
+}
+
+@keyframes springDown {
+    from {
+        transform: translateY(-100px);
+    }
+    to {
+        transform: translateY(0);
+    }
+}

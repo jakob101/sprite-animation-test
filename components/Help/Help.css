@@ -1,0 +1,13 @@
+.help {
+    font-family: 'Open Sans', sans-serif;
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+
+}
+
+.help a {
+    color: #ECECEC;
+    font-size: 13px;
+}

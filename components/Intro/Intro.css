@@ -1,0 +1,12 @@
+#initial {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    transform: translate(-50%, -50%);
+}
+
+#initial i {
+    color: #ECECEC;
+    font-size: 100px;
+}
