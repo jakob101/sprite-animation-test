@@ -15,6 +15,7 @@ export default React.createClass ({
                     type="range" 
                     value={this.props.speed}
                     onChange={this.handleChange}
+                    onMouseUp={this.handleChange}
                     min={this.props.min} 
                     step={this.props.step} 
                     max={this.props.max} /> 

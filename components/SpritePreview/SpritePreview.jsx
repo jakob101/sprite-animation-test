@@ -33,10 +33,25 @@ export default React.createClass ({
     },
     
     generateSprite: function() {
-        let element = document.createElement("a");
-        element.href = this.refs["animationCanvas"].toDataURL();
-        element.download = "sprite.png";
-        element.click();
+        const canvas = this.refs["animationCanvas"];
+        let element = null;
+        if (canvas.msToBlob) {
+            // Internet Explorer
+            element = canvas.msToBlob();
+            window.navigator.msSaveBlob(element, 'sprite.png');
+        } else {
+            // Other browsers
+            element = document.createElement("a");
+            element.href = canvas.toDataURL();
+            element.download = "sprite.png";
+            
+            let clickEvent = new MouseEvent("click", {
+                "view": window,
+                "bubbles": true,
+                "cancelable": false
+            });
+            element.dispatchEvent(clickEvent);
+        }
     },
     
 	render: function() {
