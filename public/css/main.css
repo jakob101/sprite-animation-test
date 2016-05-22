@@ -79,6 +79,7 @@ html, body {
     left: 0;
     height: 100%;
     width: 100%;
+    min-width: 650px;
     transition: transform .3s ease-out,
                 background .3s ease-out;
 }

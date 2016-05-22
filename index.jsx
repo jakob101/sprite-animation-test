@@ -11,6 +11,7 @@ import Range from "./components/Range/Range";
 import AssetInfo from "./components/AssetInfo/AssetInfo";
 import DownloadSpriteButton from "./components/DownloadSpriteButton/DownloadSpriteButton";
 import Background from "./components/Background/Background";
+import BackButton from "./components/BackButton/BackButton";
 
 var App = React.createClass ({
 	getInitialState: function() {
@@ -69,6 +70,10 @@ var App = React.createClass ({
 		this.setState({ speed: speed });
 	},
 	
+	reset: function() {
+		this.setState(this.getInitialState());
+	},
+	
 	render: function() {
 		if (this.state.files.length === 0) {
 			const style = "dropbox" + (this.state.dragging ? " dragging" : "");
@@ -85,6 +90,7 @@ var App = React.createClass ({
 		} else {
 			return (
 				<div className="dropbox">
+					<BackButton onClick={() => this.reset()} />
 					<Tip />
 					<SpritePreview 
 						ref="spritePreview"
@@ -101,11 +107,11 @@ var App = React.createClass ({
 						onChange={(speed) => this.changeSpeed(speed)} />
 					<AssetInfo 
 						assetWidth={this.state.assetWidth} 
-						assetHeight={this.state.assetHeight} />
-					<DownloadSpriteButton 
-						onClick={() => this.generateSprite()} 
+						assetHeight={this.state.assetHeight}
 						canvasWidth={this.state.canvasWidth} 
 						canvasHeight={this.state.canvasHeight} />
+					<DownloadSpriteButton 
+						onClick={() => this.generateSprite()} />
 				</div>
 			);
 		}

@@ -6,7 +6,7 @@ export default React.createClass ({
         return (
             <div className="tip">
                 <div className="tipIcon">
-                    <i className="fa fa-bolt" aria-hidden="true"></i>
+                    <i className="fa fa-question" aria-hidden="true"></i>
                 </div>
                 Hover to trigger the animation
             </div>

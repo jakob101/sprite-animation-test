@@ -1,8 +1,8 @@
 #download {
-    font-family: 'Roboto Slab', serif;
+    font-family: 'Open Sans', sans-serif;
     position: absolute;
     text-align: center;
-    bottom: 50px;
+    top: 30px;
     right: 40px;
     animation: moveInFromRight 0.5s cubic-bezier(0.060, 0.735, 0.000, 0.995);
 }
@@ -19,11 +19,43 @@
 #downloadSprite {
     display: inline-block;
     text-decoration: none;
+    background: white;
+    cursor: pointer;
+    font-size: 13px;
+    border-radius: 40px;
+    box-sizing: border-box;
+    line-height: 60px;
+    padding: 0 30px;
+    text-transform: uppercase;
+    color: #09727D;
+}
+
+.downloadIcon {
+    opacity: 0;
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    color: white;
+    margin-left: -8px;
+}
+
+#downloadSprite:hover {
     background: #09727D;
     color: white;
-    cursor: pointer;
-    padding: 6px 10px;
-    font-size: 13px;
-    border-radius: 3px;
-    margin-top: 20px;
+}
+
+#download:hover .downloadIcon {
+    animation: fadeDown 0.6s cubic-bezier(0.060, 0.735, 0.000, 0.995);
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeDown {
+    from {
+        opacity: 0;
+        transform: translateY(0);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(10px);
+    }
 }
